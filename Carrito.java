@@ -15,4 +15,13 @@ public class Carrito{
     public void dejarProducto(Producto producto){
         items.removeIf(item -> item.producto().nombre().equals(producto.nombre()));
     }
+
+    public double monto(){ 
+        double monto = 0;
+        
+        for(int elemento = 0; elemento< (this.items.size()-1);elemento++){
+            monto += this.items.get(elemento).valor();
+        }
+        return monto;
+    }
 }

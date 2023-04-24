@@ -12,4 +12,6 @@ public class Item {
     public Producto producto(){
         return this.producto;
     }
+
+    public double valor(){return this.valor;}
 }
