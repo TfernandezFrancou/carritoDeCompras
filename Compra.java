@@ -1,9 +1,7 @@
 public class Compra{
     private Cliente cliente;
     private Carrito carrito;
+    private Double total;
 
-    public void realizarCompra(){
-        cliente.pedirPlata(this.carrito.monto());
-    }
 
 }

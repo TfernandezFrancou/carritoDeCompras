@@ -10,15 +10,12 @@ public class Cliente{
     private List<Tarjeta> tarjetas;
     private List<Carrito> carritos;
     private Boolean preferencial;
-    private Double dinero;
+   
 
     public void agarrarCarrito(){
        carritos.add(new Carrito(this));
     }
     public void agregarTarjeta(Tarjeta tarjeta){
         tarjetas.add(tarjeta);
-    }
-    public void pedirPlata(Double plata){
-        dinero -= plata;
     }
 }
