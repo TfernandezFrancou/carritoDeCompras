@@ -17,11 +17,18 @@ public class Carrito{
     }
 
     public double monto(){ 
-        double monto = 0;
+        double monto = items
+            .stream()
+            .mapToDouble(item -> item.valor())
+            .sum();
+        double montoReal = monto*(1-cliente.descuentoPreferencia());
+
+        return montoReal;
+        /* double monto = 0;
         
         for(int elemento = 0; elemento< (this.items.size()-1);elemento++){
             monto += this.items.get(elemento).valor();
         }
-        return monto;
+        return monto*(1-cliente.descuentoPreferencia()); */
     }
 }

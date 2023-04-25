@@ -1,7 +1,5 @@
 import java.util.List;
 
-import javax.swing.text.PlainDocument;
-
 public class Cliente{
     private String nombre;
     private String direccionDeEnvio;
@@ -9,8 +7,11 @@ public class Cliente{
     private String eMail;
     private List<Tarjeta> tarjetas;
     private List<Carrito> carritos;
-    private Boolean preferencial;
-   
+    private float descuentoPreferencia;
+
+    public Float descuentoPreferencia() {
+        return this.descuentoPreferencia;
+    }
 
     public void agarrarCarrito(){
        carritos.add(new Carrito(this));
