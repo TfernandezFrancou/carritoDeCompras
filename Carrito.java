@@ -19,11 +19,10 @@ public class Carrito{
     public double monto(){ 
         double monto = items
             .stream()
-            .mapToDouble(item -> item.valor())
+            .mapToDouble(Item::valor)
             .sum();
-        double montoReal = monto*(1-cliente.descuentoPreferencia());
 
-        return montoReal;
+        return monto*(1-cliente.descuentoPreferencia());
         /* double monto = 0;
         
         for(int elemento = 0; elemento< (this.items.size()-1);elemento++){

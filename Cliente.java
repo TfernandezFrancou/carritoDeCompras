@@ -9,7 +9,7 @@ public class Cliente{
     private List<Carrito> carritos;
     private float descuentoPreferencia;
 
-    public Float descuentoPreferencia() {
+    public float descuentoPreferencia() {
         return this.descuentoPreferencia;
     }
 
